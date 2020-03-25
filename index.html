@@ -68,16 +68,47 @@
       </div>
     </div>
     <div class="right-col col">
-      <h3>Opóźnione i odwołane loty</h3>
-      <div class="flight delayed-short">
-        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>12:30</b></p>
-      </div>
-      <div class="flight delayed-long">
-        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>17:00</b></p>
-      </div>
-      <div class="flight canceled">
-        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>Odwołany</b></p>
-      </div>
+      <section class="flight-warnings">
+        <h3>Opóźnione i odwołane loty</h3>
+        <div class="flight delayed-short">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>12:30</b></p>
+        </div>
+        <div class="flight delayed-long">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>17:00</b></p>
+        </div>
+        <div class="flight canceled">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>Odwołany</b></p>
+        </div>
+      </section>
+      <section class="flight-reservation">
+        <h3>Rezerwacja lotów</h3>
+        <form>
+          <input type="reset" value="Reset"/><br>
+
+          <label for="from">Skąd:</label>
+          <select id="from" name="from">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
+
+          <label for="to">Dokąd:</label>
+          <select id="to" name="to">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
+
+          <label for="to">Data:</label>
+          <input type="date" id="date" name="date"><br>
+
+          <label for="first-name">Imię:</label>
+          <input type="text" id="first-name" name="first-name"><br>
+
+          <label for="last-name">Nazwisko:</label>
+          <input type="text" id="last-name" name="last-name"><br>
+
+          <input type="submit" value="Rezerwuj"/><br>
+        </form> 
+      </section>
     </div>
   </div>
 

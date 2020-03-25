@@ -124,3 +124,7 @@ th, td {
 .canceled {
   background-color: #ffcccb;
 }
+
+.right-col > * + * {
+  margin-top: 32px;
+}
