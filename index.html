@@ -9,66 +9,83 @@
   <script src='main.js'></script>
 </head>
 <body>
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">Strona główna</a></li>
-      <li><a href="index.html">Loty</a></li>
-      <li><a href="index.html">Kontakt</a></li>
-      <li><a href="index.html">Promocje</a></li>
-      <li><a href="index.html">Sklep</a></li>
-      <li>
-        <span>O firmie</span>
-        <ul class="subnav">
-          <li><a href="index.html">Zespół</a></li>
-          <li><a href="index.html">Siedziba</a></li>
-          <li><a href="index.html">Historia</a></li>
+  <div class="container">
+    <div class="left-col col">
+      <h3>Menu</h3>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="index.html">Loty</a></li>
+          <li><a href="index.html">Kontakt</a></li>
+          <li><a href="index.html">Promocje</a></li>
+          <li><a href="index.html">Sklep</a></li>
+          <li>
+            <a href="index.html">O firmie</a>
+            <ul class="menu-list menu-sub-list">
+              <li><a href="index.html">Zespół</a></li>
+              <li><a href="index.html">Siedziba</a></li>
+              <li><a href="index.html">Historia</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h3 class="header">Lista lotów</h3>
-    <p id="pierwszy">Poniżej znajduje się lista lotów.</p>
-    <p id="drugi">Nie ma ona żadnego związku z rzeczywistością.</p>
-    <div class="pudelko">
-      <p id="trzeci">Ale super lot!</p>
-      <table class="flights-table">
-        <tr class="table-headers">
-          <th>Numer lotu</th>
-          <th>Skąd</th>
-          <th>Dokąd</th>
-          <th>Data</th>
-          <th>Godzina</th>
-        </tr>
-        <tr>
-          <td><a href="sub.html">1560A</a></td>
-          <td>Warszawa</td>
-          <td>Dublin</td>
-          <td>21.06.2020</td>
-          <td>12:00</td>
-        </tr>
-        <tr>
-          <td><a href="sub.html">1560A</a></td>
-          <td>Warszawa</td>
-          <td>Dublin</td>
-          <td>21.06.2020</td>
-          <td><del>12:00</del><span class="red-text"> 12:30</span></td>
-        </tr>
-        <tr>
-          <td><a href="sub.html">1560A</a></td>
-          <td>Warszawa</td>
-          <td>Dublin</td>
-          <td>21.06.2020</td>
-          <td><del>12:00</del><span class="red-text"> Odwołany</span></td>
-        </tr>
-      </table>
+      </nav>
     </div>
-    <footer>
-      <p>Autor: Hugo Dutka</p>
-    </footer> 
-    <a href="index.html">
-      <img id="logo" src="img/wat.jpg" alt="logo firmy">
-    </a>
+    <div class="mid-col col content">
+      <h3 class="header">Lista lotów</h3>
+      <p id="pierwszy">Poniżej znajduje się lista lotów.</p>
+      <p id="drugi">Nie ma ona żadnego związku z rzeczywistością.</p>
+      <div class="pudelko">
+        <table class="flights-table">
+          <tr class="table-headers">
+            <th>Numer lotu</th>
+            <th>Skąd</th>
+            <th>Dokąd</th>
+            <th>Data</th>
+            <th>Godzina</th>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="right-col col">
+      <h3>Opóźnione i odwołane loty</h3>
+      <div class="flight delayed-short">
+        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>12:30</b></p>
+      </div>
+      <div class="flight delayed-long">
+        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>17:00</b></p>
+      </div>
+      <div class="flight canceled">
+        <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>Odwołany</b></p>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    <p>Autor: Hugo Dutka</p>
+  </footer> 
+  <a href="index.html">
+    <img id="logo" src="img/wat.jpg" alt="logo firmy">
+  </a>
 </body>
 </html>

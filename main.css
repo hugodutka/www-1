@@ -48,15 +48,6 @@ th, td {
   position: relative;
 }
 
-#trzeci {
-  background-color: yellowgreen;
-  position: absolute;
-  top: 30px;
-  left: 100px;
-  width: 200px;
-  z-index: 5;
-}
-
 .pudelko {
   position: relative;
 }
@@ -70,6 +61,66 @@ th, td {
   width: 250px;
 }
 
-.red-text {
-  color: red;
+.menu {
+  font-family: 'Arial';
+  text-transform: uppercase;
+}
+
+.menu-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu-list li a:visited {
+  color: black;
+}
+
+.menu-list li a:hover {
+  color: gray;
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-sub-list {
+  margin-left: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.left-col {
+  width: 300px;
+  max-width: 300px;
+}
+
+.mid-col {
+  flex-grow: 1;
+}
+
+.right-col {
+  width: 300px;
+  max-width: 300px;
+}
+
+.col {
+  margin: 8px;
+}
+
+.delayed-short {
+  background-color: yellow;
+}
+
+.delayed-long {
+  background-color: orange;
+}
+
+.canceled {
+  background-color: #ffcccb;
 }
