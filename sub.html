@@ -9,52 +9,118 @@
   <script src='main.js'></script>
 </head>
 <body>
-  <div class="content">
-    <h3 class="header">
-      Lot 1560A <b><a href="https://pl.wikipedia.org/wiki/Warszawa">Warszawa</a> -> <a href="https://pl.wikipedia.org/wiki/Dublin">Dublin</a></b>
-    </h3>
+  <div class="container">
+    <div class="left-col col">
+      <h3>Menu</h3>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="index.html">Loty</a></li>
+          <li><a href="index.html">Kontakt</a></li>
+          <li><a href="index.html">Promocje</a></li>
+          <li><a href="index.html">Sklep</a></li>
+          <li>
+            <a href="index.html">O firmie</a>
+            <ul class="menu-list menu-sub-list">
+              <li><a href="index.html">Zespół</a></li>
+              <li><a href="index.html">Siedziba</a></li>
+              <li><a href="index.html">Historia</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="mid-col col content">
+      <h3 class="header">
+        Lot 1560A <b><a href="https://pl.wikipedia.org/wiki/Warszawa">Warszawa</a> -> <a href="https://pl.wikipedia.org/wiki/Dublin">Dublin</a></b>
+      </h3>
 
-    <div class="town-images">
-      <a href="https://pl.wikipedia.org/wiki/Warszawa">
-        <img class="town" src="img/warszawa.jpg" alt="Warszawa">
-      </a>
-      <a href="https://pl.wikipedia.org/wiki/Dublin">
-        <img src="img/dublin.jpg" alt="Dublin">
-      </a>
+      <div class="town-images">
+        <a href="https://pl.wikipedia.org/wiki/Warszawa">
+          <img class="town" src="img/warszawa.jpg" alt="Warszawa">
+        </a>
+        <a href="https://pl.wikipedia.org/wiki/Dublin">
+          <img src="img/dublin.jpg" alt="Dublin">
+        </a>
+      </div>
+
+      <div class="weather-container">
+        <p>Pogoda w Warszawie: Słonecznie</p>
+        <p>Pogoda w Dubline: Brzydko</p>
+      </div>
+
+      <div class="flight-time">
+        <p>Data lotu: 21.06.2020 12:00</p>
+      </div>
+
+      <div class="plane-description">
+        <p>Samolot: <b>Boeing 737 MAX</b></p>
+        <p>Liczba miejsc: <b>204</b></p>
+        <img src="img/samolot.jpg" alt="samolot">
+        <p>Lista pasażerów</p>
+        <ul>
+          <li>Hugo Dutka</li>
+          <li>Margaret Thatcher</li>
+          <li>Pearl Hines</li>
+          <li>Lois Brewer</li>
+          <li>Mamie Lindsey</li>
+          <li>Mario Ferguson</li>
+          <li>Daisy Morton</li>
+          <li>Gary Sims</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="weather-container">
-      <p>Pogoda w Warszawie: Słonecznie</p>
-      <p>Pogoda w Dubline: Brzydko</p>
-    </div>
+    <div class="right-col col">
+      <section class="flight-warnings">
+        <h3>Opóźnione i odwołane loty</h3>
+        <div class="flight delayed-short">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>12:30</b></p>
+        </div>
+        <div class="flight delayed-long">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>17:00</b></p>
+        </div>
+        <div class="flight canceled">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>Odwołany</b></p>
+        </div>
+      </section>
+      <section class="flight-reservation">
+        <h3>Rezerwacja lotów</h3>
+        <form>
+          <input type="reset" value="Reset"/><br>
 
-    <div class="flight-time">
-      <p>Data lotu: 21.06.2020 12:00</p>
-    </div>
+          <label for="from">Skąd:</label>
+          <select id="from" name="from">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
 
-    <div class="plane-description">
-      <p>Samolot: <b>Boeing 737 MAX</b></p>
-      <p>Liczba miejsc: <b>204</b></p>
-      <img src="img/samolot.jpg" alt="samolot">
-      <p>Lista pasażerów</p>
-      <ul>
-        <li>Hugo Dutka</li>
-        <li>Margaret Thatcher</li>
-        <li>Pearl Hines</li>
-        <li>Lois Brewer</li>
-        <li>Mamie Lindsey</li>
-        <li>Mario Ferguson</li>
-        <li>Daisy Morton</li>
-        <li>Gary Sims</li>
-      </ul>
-    </div>
+          <label for="to">Dokąd:</label>
+          <select id="to" name="to">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
 
-    <footer>
-      <p>Autor: Hugo Dutka</p>
-    </footer> 
-    <a href="index.html">
-      <img id="logo" src="img/wat.jpg" alt="logo firmy">
-    </a>
+          <label for="to">Data:</label>
+          <input type="date" id="date" name="date"><br>
+
+          <label for="first-name">Imię:</label>
+          <input type="text" id="first-name" name="first-name"><br>
+
+          <label for="last-name">Nazwisko:</label>
+          <input type="text" id="last-name" name="last-name"><br>
+
+          <input type="submit" value="Rezerwuj"/><br>
+        </form> 
+      </section>
+    </div>
   </div>
+  <footer>
+    <p>Autor: Hugo Dutka</p>
+  </footer> 
+  <a href="index.html">
+    <img id="logo" src="img/wat.jpg" alt="logo firmy">
+  </a>
 </body>
 </html>
