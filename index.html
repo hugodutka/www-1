@@ -9,6 +9,23 @@
   <script src='main.js'></script>
 </head>
 <body>
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="index.html">Loty</a></li>
+      <li><a href="index.html">Kontakt</a></li>
+      <li><a href="index.html">Promocje</a></li>
+      <li><a href="index.html">Sklep</a></li>
+      <li>
+        <span>O firmie</span>
+        <ul class="subnav">
+          <li><a href="index.html">Zespół</a></li>
+          <li><a href="index.html">Siedziba</a></li>
+          <li><a href="index.html">Historia</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
   <div class="content">
     <h3 class="header">Lista lotów</h3>
     <p id="pierwszy">Poniżej znajduje się lista lotów.</p>
@@ -35,14 +52,14 @@
           <td>Warszawa</td>
           <td>Dublin</td>
           <td>21.06.2020</td>
-          <td>12:00</td>
+          <td><del>12:00</del><span class="red-text"> 12:30</span></td>
         </tr>
         <tr>
           <td><a href="sub.html">1560A</a></td>
           <td>Warszawa</td>
           <td>Dublin</td>
           <td>21.06.2020</td>
-          <td>12:00</td>
+          <td><del>12:00</del><span class="red-text"> Odwołany</span></td>
         </tr>
       </table>
     </div>

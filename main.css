@@ -69,3 +69,7 @@ th, td {
 .town-images a > * {
   width: 250px;
 }
+
+.red-text {
+  color: red;
+}
