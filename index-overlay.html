@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Lista lotów</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <div class="container">
+    <div class="left-col col">
+      <h3>Menu</h3>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="index.html">Loty</a></li>
+          <li><a href="index.html">Kontakt</a></li>
+          <li><a href="index.html">Promocje</a></li>
+          <li><a href="index.html">Sklep</a></li>
+          <li>
+            <a href="index.html">O firmie</a>
+            <ul class="menu-list menu-sub-list">
+              <li><a href="index.html">Zespół</a></li>
+              <li><a href="index.html">Siedziba</a></li>
+              <li><a href="index.html">Historia</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mid-col col content">
+      <h3 class="header">Lista lotów</h3>
+      <p id="pierwszy">Poniżej znajduje się lista lotów.</p>
+      <p id="drugi">Nie ma ona żadnego związku z rzeczywistością.</p>
+      <div class="pudelko">
+        <table class="flights-table">
+          <tr class="table-headers">
+            <th>Numer lotu</th>
+            <th>Skąd</th>
+            <th>Dokąd</th>
+            <th>Data</th>
+            <th>Godzina</th>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <td><a href="sub.html">1560A</a></td>
+            <td>Warszawa</td>
+            <td>Dublin</td>
+            <td>21.06.2020</td>
+            <td>12:00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="right-col col">
+      <section class="flight-warnings">
+        <h3>Opóźnione i odwołane loty</h3>
+        <div class="flight delayed-short">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>12:30</b></p>
+        </div>
+        <div class="flight delayed-long">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>17:00</b></p>
+        </div>
+        <div class="flight canceled">
+          <p>1560A, Warszawa -> Dublin, <del>12:00</del> <b>Odwołany</b></p>
+        </div>
+      </section>
+      <section class="flight-reservation">
+        <h3>Rezerwacja lotów</h3>
+        <form>
+          <input type="reset" value="Reset"/><br>
+
+          <label for="from">Skąd:</label>
+          <select id="from" name="from">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
+
+          <label for="to">Dokąd:</label>
+          <select id="to" name="to">
+            <option value="warszawa">Warszawa</option>
+            <option value="dublin">Dublin</option>
+          </select><br>
+
+          <label for="to">Data:</label>
+          <input type="date" id="date" name="date"><br>
+
+          <label for="first-name">Imię:</label>
+          <input type="text" id="first-name" name="first-name"><br>
+
+          <label for="last-name">Nazwisko:</label>
+          <input type="text" id="last-name" name="last-name"><br>
+
+          <input type="submit" value="Rezerwuj"/><br>
+        </form> 
+      </section>
+    </div>
+    <footer>
+      <p>Autor: Hugo Dutka</p>
+      <a href="index.html">
+        <img id="logo" src="img/wat.jpg" alt="logo firmy">
+      </a>
+    </footer> 
+  </div>
+
+</body>
+</html>
