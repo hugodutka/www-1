@@ -153,3 +153,26 @@ th, td {
     display: none;
   }
 }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: white;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.passengers .passenger:nth-child(2n) {
+  color: red;
+}
