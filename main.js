@@ -25,3 +25,6 @@ for (var _a = 0, passengers_2 = passengers; _a < passengers_2.length; _a++) {
     }
 }
 console.log(maxIdPassenger);
+setTimeout(function () {
+    console.log("No już wreszcie.");
+}, 2000);

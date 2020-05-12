@@ -35,3 +35,7 @@ for (let passenger of passengers) {
 }
 
 console.log(maxIdPassenger);
+
+setTimeout(() => {
+  console.log("No już wreszcie.");
+}, 2000);
