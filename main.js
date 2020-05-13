@@ -73,6 +73,8 @@ var teczoweKolory = function (el) { return __awaiter(_this, void 0, void 0, func
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
+                if (el === null)
+                    return [2 /*return*/];
                 colors = [
                     "red",
                     "orange",
@@ -155,3 +157,64 @@ var displayCommiterInfo = function () { return __awaiter(_this, void 0, void 0, 
     });
 }); };
 displayCommiterInfo();
+var gridContainer = document.querySelector(".container");
+var rightCol = document.querySelector(".right-col");
+var clickCounter = 0;
+var fibs = [0, 1];
+var fib = function (i) {
+    if (i < 0)
+        return 0;
+    while (fibs.length < i + 1) {
+        fibs.push(fibs[fibs.length - 1] + fibs[fibs.length - 2]);
+    }
+    return fibs[i];
+};
+var clickHandler = function (e) {
+    console.log(fib(10 * clickCounter));
+    clickCounter++;
+    var elem = e.target;
+    if (!rightCol.contains(elem))
+        return;
+    rightCol.classList.toggle("colourful");
+};
+gridContainer.addEventListener("click", clickHandler);
+var reservationsSection = document.querySelector("section.flight-reservation");
+reservationsSection.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+var verifyForm = function () {
+    var firstName = document.querySelector("input#first-name");
+    var lastName = document.querySelector("input#last-name");
+    var date = document.querySelector("input#date");
+    var origin = document.querySelector("select#from");
+    var destination = document.querySelector("select#to");
+    var submit = document.querySelector("input[type=submit][value=Rezerwuj]");
+    if (firstName.value.length > 0 &&
+        lastName.value.length > 0 &&
+        new Date(date.value) > new Date(Date.now()) &&
+        origin.value.length > 0 &&
+        destination.value.length > 0 &&
+        origin.value !== destination.value) {
+        submit.style.display = "block";
+    }
+    else {
+        submit.style.display = "none";
+    }
+};
+var showFormSummary = function () {
+    var sel = function (q) { return document.querySelector(q); };
+    sel("#summary-from").innerText = sel("select#from").value;
+    sel("#summary-to").innerText = sel("select#to").value;
+    sel("#summary-first-name").innerText = sel("input#first-name").value;
+    sel("#summary-last-name").innerText = sel("input#last-name").value;
+    sel("#summary-date").innerText = sel("input#date").value;
+    sel("#flight-reservation-summary").style.display = "block";
+};
+var reservationsForm = document.querySelector("form#flight-reservation-form");
+reservationsForm.addEventListener("input", verifyForm);
+reservationsForm.addEventListener("reset", function () { return setTimeout(verifyForm, 10); });
+window.addEventListener("load", verifyForm);
+reservationsForm.addEventListener("submit", function (e) {
+    showFormSummary();
+    e.preventDefault();
+});

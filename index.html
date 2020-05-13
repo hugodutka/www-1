@@ -6,6 +6,12 @@
   <title>Lista lotów</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector("#first-name").value = "Hugo";
+      document.querySelector("#last-name").value = "Dutka";
+    });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -81,7 +87,7 @@
       </section>
       <section class="flight-reservation">
         <h3>Rezerwacja lotów</h3>
-        <form>
+        <form id="flight-reservation-form">
           <input type="reset" value="Reset"/><br>
 
           <label for="from">Skąd:</label>
@@ -107,6 +113,14 @@
 
           <input type="submit" value="Rezerwuj"/><br>
         </form> 
+        <section id="flight-reservation-summary" style="display: none;">
+          <h3>Podsumowanie</h3>
+          <p>Skąd: <span id="summary-from"></span></p>
+          <p>Dokąd: <span id="summary-to"></span></p>
+          <p>Data: <span id="summary-date"></span></p>
+          <p>Imię: <span id="summary-first-name"></span></p>
+          <p>Nazwisko: <span id="summary-last-name"></span></p>
+        </section>
       </section>
     </div>
     <section id="commiter-info"></section>
